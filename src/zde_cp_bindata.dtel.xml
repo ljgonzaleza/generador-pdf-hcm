@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZDE_CP_BINDATA</ROLLNAME>
+    <DDLANGUAGE>S</DDLANGUAGE>
+    <DATATYPE>RSTR</DATATYPE>
+    <LENG>000000</LENG>
+    <OUTPUTLEN>000000</OUTPUTLEN>
+    <DDTEXT>Contenido binario (RAWSTRING)</DDTEXT>
+    <REPTEXT>Binario</REPTEXT>
+    <SCRTEXT_S>Binario</SCRTEXT_S>
+    <SCRTEXT_M>Binario</SCRTEXT_M>
+    <SCRTEXT_L>Contenido binario</SCRTEXT_L>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

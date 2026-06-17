@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZHHR_CP_MSG</ARBGB>
+    <MASTERLANG>S</MASTERLANG>
+    <STEXT>Mensajes generador de documentos PDF HCM</STEXT>
+   </T100A>
+   <T100_TEXTS>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp;1 &amp;2 &amp;3 &amp;4</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>La plantilla &amp;1 no existe</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>La plantilla &amp;1 no tiene versión activa</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Existen placeholders sin mapeo: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Error al leer el infotipo &amp;1 del empleado &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Error al generar el documento PDF</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>El documento &amp;1 no existe</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>No se pudo asignar el número de documento</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Debe informar el campo &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Formato de imagen de firma no soportado: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>No existe registro vigente del infotipo &amp;1 para el empleado &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>La versión &amp;1 de la plantilla &amp;2 no es editable (estado &amp;3)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Documento generado correctamente. Número &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>No se encontraron documentos para los criterios indicados</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>No tiene autorización para ejecutar la transacción &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>La plantilla &amp;1 ya existe</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Operación cancelada por el usuario</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>No se pudo abrir o descargar el archivo en el frontend</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Seleccione una fila</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>Plantilla &amp;1 versión &amp;2 guardada como borrador</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Plantilla &amp;1 versión &amp;2 activada</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Plantilla &amp;1 desactivada</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZHHR_CP_MSG</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>No existen plantillas</TEXT>
+    </T100>
+   </T100_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

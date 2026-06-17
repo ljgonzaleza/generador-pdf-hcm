@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZDE_CP_FNAME</ROLLNAME>
+    <DDLANGUAGE>S</DDLANGUAGE>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000128</LENG>
+    <OUTPUTLEN>000128</OUTPUTLEN>
+    <DDTEXT>Nombre de archivo</DDTEXT>
+    <REPTEXT>Archivo</REPTEXT>
+    <SCRTEXT_S>Archivo</SCRTEXT_S>
+    <SCRTEXT_M>Nombre archivo</SCRTEXT_M>
+    <SCRTEXT_L>Nombre de archivo</SCRTEXT_L>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>
