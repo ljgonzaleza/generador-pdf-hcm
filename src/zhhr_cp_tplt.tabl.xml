@@ -9,6 +9,7 @@
     <CLIDEP>X</CLIDEP>
     <DDTEXT>HCM PDF: líneas del cuerpo de plantilla</DDTEXT>
     <CONTFLAG>A</CONTFLAG>
+    <EXCLASS>1</EXCLASS>
    </DD02V>
    <DD09L>
     <TABNAME>ZHHR_CP_TPLT</TABNAME>
