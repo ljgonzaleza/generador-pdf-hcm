@@ -90,7 +90,7 @@ CLASS zcl_cp_doc_history IMPLEMENTATION.
       INTO ( @ev_pdf, @ev_filename )
       WHERE doc_id = @iv_doc_id.
     IF sy-subrc <> 0.
-      MESSAGE e006 WITH iv_doc_id INTO DATA(lv_msg).
+      MESSAGE e006(zhhr_cp_msg) WITH iv_doc_id INTO DATA(lv_msg).
       RAISE EXCEPTION TYPE zcx_cp_error EXPORTING iv_text = lv_msg.
     ENDIF.
   ENDMETHOD.

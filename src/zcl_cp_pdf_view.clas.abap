@@ -54,7 +54,7 @@ CLASS zcl_cp_pdf_view IMPLEMENTATION.
 
 
   METHOD raise_fe.
-    MESSAGE e017 INTO DATA(lv_msg).
+    MESSAGE e017(zhhr_cp_msg) INTO DATA(lv_msg).
     RAISE EXCEPTION TYPE zcx_cp_error EXPORTING iv_text = lv_msg.
   ENDMETHOD.
 

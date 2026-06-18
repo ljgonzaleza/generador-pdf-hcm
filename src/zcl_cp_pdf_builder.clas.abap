@@ -130,7 +130,7 @@ CLASS zcl_cp_pdf_builder IMPLEMENTATION.
 
 
   METHOD raise_error.
-    MESSAGE e005 INTO DATA(lv_msg).
+    MESSAGE e005(zhhr_cp_msg) INTO DATA(lv_msg).
     RAISE EXCEPTION TYPE zcx_cp_error
       EXPORTING
         iv_text  = lv_msg

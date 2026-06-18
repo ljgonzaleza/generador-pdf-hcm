@@ -56,7 +56,7 @@ CLASS zcl_cp_hr_reader IMPLEMENTATION.
 
       CATCH cx_sy_dynamic_osql_semantics
             cx_sy_dynamic_osql_error INTO DATA(lo_err).
-        MESSAGE e004 WITH iv_infty iv_pernr INTO DATA(lv_msg).
+        MESSAGE e004(zhhr_cp_msg) WITH iv_infty iv_pernr INTO DATA(lv_msg).
         RAISE EXCEPTION TYPE zcx_cp_error
           EXPORTING
             iv_text  = lv_msg

@@ -129,7 +129,7 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
       WHERE tpl_id  = @iv_tpl_id
         AND version = @iv_version.
     IF sy-subrc <> 0.
-      MESSAGE e001 WITH iv_tpl_id INTO DATA(lv_msg).
+      MESSAGE e001(zhhr_cp_msg) WITH iv_tpl_id INTO DATA(lv_msg).
       raise_msg( lv_msg ).
     ENDIF.
 
@@ -155,11 +155,11 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
       INTO @rv_version
       WHERE tpl_id = @iv_tpl_id.
     IF sy-subrc <> 0.
-      MESSAGE e001 WITH iv_tpl_id INTO DATA(lv_msg).
+      MESSAGE e001(zhhr_cp_msg) WITH iv_tpl_id INTO DATA(lv_msg).
       raise_msg( lv_msg ).
     ENDIF.
     IF rv_version IS INITIAL.
-      MESSAGE e002 WITH iv_tpl_id INTO lv_msg.
+      MESSAGE e002(zhhr_cp_msg) WITH iv_tpl_id INTO lv_msg.
       raise_msg( lv_msg ).
     ENDIF.
   ENDMETHOD.
@@ -173,7 +173,7 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
           lt_map  TYPE tt_map.
 
     IF iv_tpl_id IS INITIAL.
-      MESSAGE e008 WITH 'TPL_ID' INTO DATA(lv_msg).
+      MESSAGE e008(zhhr_cp_msg) WITH 'TPL_ID' INTO DATA(lv_msg).
       raise_msg( lv_msg ).
     ENDIF.
 
@@ -192,7 +192,7 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
       ls_hdr-erdat      = sy-datum.
       INSERT zhhr_cp_tplh FROM @ls_hdr.
       IF sy-subrc <> 0.
-        MESSAGE e015 WITH iv_tpl_id INTO lv_msg.
+        MESSAGE e015(zhhr_cp_msg) WITH iv_tpl_id INTO lv_msg.
         raise_msg( lv_msg ).
       ENDIF.
     ELSE.
@@ -216,7 +216,7 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
             aedat = @sy-datum
         WHERE tpl_id = @iv_tpl_id.
       IF sy-subrc <> 0.
-        MESSAGE e005 INTO lv_msg.
+        MESSAGE e005(zhhr_cp_msg) INTO lv_msg.
         raise_msg( lv_msg ).
       ENDIF.
     ENDIF.
@@ -233,7 +233,7 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
     ls_ver-aedat   = sy-datum.
     MODIFY zhhr_cp_tplv FROM @ls_ver.
     IF sy-subrc <> 0.
-      MESSAGE e005 INTO lv_msg.
+      MESSAGE e005(zhhr_cp_msg) INTO lv_msg.
       raise_msg( lv_msg ).
     ENDIF.
 
@@ -250,7 +250,7 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
     IF lt_tplt IS NOT INITIAL.
       INSERT zhhr_cp_tplt FROM TABLE @lt_tplt.
       IF sy-subrc <> 0.
-        MESSAGE e005 INTO lv_msg.
+        MESSAGE e005(zhhr_cp_msg) INTO lv_msg.
         raise_msg( lv_msg ).
       ENDIF.
     ENDIF.
@@ -267,7 +267,7 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
     IF lt_map IS NOT INITIAL.
       INSERT zhhr_cp_map FROM TABLE @lt_map.
       IF sy-subrc <> 0.
-        MESSAGE e005 INTO lv_msg.
+        MESSAGE e005(zhhr_cp_msg) INTO lv_msg.
         raise_msg( lv_msg ).
       ENDIF.
     ENDIF.
@@ -296,7 +296,7 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
     DATA(lv_missing) = validate_placeholders( it_lines = lt_lines
                                               it_map   = lt_map ).
     IF lv_missing IS NOT INITIAL.
-      MESSAGE e003 WITH lv_missing INTO DATA(lv_msg).
+      MESSAGE e003(zhhr_cp_msg) WITH lv_missing INTO DATA(lv_msg).
       raise_msg( lv_msg ).
     ENDIF.
 
@@ -305,7 +305,7 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
       INTO @lv_active
       WHERE tpl_id = @iv_tpl_id.
     IF sy-subrc <> 0.
-      MESSAGE e001 WITH iv_tpl_id INTO lv_msg.
+      MESSAGE e001(zhhr_cp_msg) WITH iv_tpl_id INTO lv_msg.
       raise_msg( lv_msg ).
     ENDIF.
 
@@ -319,7 +319,7 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
       SET status = @gc_activa
       WHERE tpl_id = @iv_tpl_id AND version = @iv_version.
     IF sy-subrc <> 0.
-      MESSAGE e005 INTO lv_msg.
+      MESSAGE e005(zhhr_cp_msg) INTO lv_msg.
       raise_msg( lv_msg ).
     ENDIF.
 
@@ -329,7 +329,7 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
           aedat      = @sy-datum
       WHERE tpl_id = @iv_tpl_id.
     IF sy-subrc <> 0.
-      MESSAGE e005 INTO lv_msg.
+      MESSAGE e005(zhhr_cp_msg) INTO lv_msg.
       raise_msg( lv_msg ).
     ENDIF.
   ENDMETHOD.
@@ -343,7 +343,7 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
       INTO @lv_active
       WHERE tpl_id = @iv_tpl_id.
     IF sy-subrc <> 0.
-      MESSAGE e001 WITH iv_tpl_id INTO DATA(lv_msg).
+      MESSAGE e001(zhhr_cp_msg) WITH iv_tpl_id INTO DATA(lv_msg).
       raise_msg( lv_msg ).
     ENDIF.
 
@@ -361,7 +361,7 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
           aedat      = @sy-datum
       WHERE tpl_id = @iv_tpl_id.
     IF sy-subrc <> 0.
-      MESSAGE e005 INTO lv_msg.
+      MESSAGE e005(zhhr_cp_msg) INTO lv_msg.
       raise_msg( lv_msg ).
     ENDIF.
   ENDMETHOD.
@@ -380,7 +380,7 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
       INTO @DATA(lv_exists)
       WHERE tpl_id = @iv_dest.
     IF lv_exists = abap_true.
-      MESSAGE e015 WITH iv_dest INTO DATA(lv_msg).
+      MESSAGE e015(zhhr_cp_msg) WITH iv_dest INTO DATA(lv_msg).
       raise_msg( lv_msg ).
     ENDIF.
 
@@ -389,7 +389,7 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
       INTO ( @lv_descr, @lv_srcver )
       WHERE tpl_id = @iv_src.
     IF sy-subrc <> 0.
-      MESSAGE e001 WITH iv_src INTO lv_msg.
+      MESSAGE e001(zhhr_cp_msg) WITH iv_src INTO lv_msg.
       raise_msg( lv_msg ).
     ENDIF.
 
@@ -400,7 +400,7 @@ CLASS zcl_cp_tpl_manager IMPLEMENTATION.
         WHERE tpl_id = @iv_src.
     ENDIF.
     IF lv_srcver IS INITIAL.
-      MESSAGE e002 WITH iv_src INTO lv_msg.
+      MESSAGE e002(zhhr_cp_msg) WITH iv_src INTO lv_msg.
       raise_msg( lv_msg ).
     ENDIF.
 

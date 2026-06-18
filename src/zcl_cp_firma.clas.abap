@@ -74,14 +74,14 @@ CLASS zcl_cp_firma IMPLEMENTATION.
     DATA ls_firm TYPE zhhr_cp_firm.
 
     IF is_firm-firm_id IS INITIAL.
-      MESSAGE e008 WITH 'FIRM_ID' INTO DATA(lv_msg).
+      MESSAGE e008(zhhr_cp_msg) WITH 'FIRM_ID' INTO DATA(lv_msg).
       RAISE EXCEPTION TYPE zcx_cp_error EXPORTING iv_text = lv_msg.
     ENDIF.
 
     IF is_firm-mimetype IS NOT INITIAL
        AND is_firm-mimetype <> 'image/png'
        AND is_firm-mimetype <> 'image/jpeg'.
-      MESSAGE e009 WITH is_firm-mimetype INTO lv_msg.
+      MESSAGE e009(zhhr_cp_msg) WITH is_firm-mimetype INTO lv_msg.
       RAISE EXCEPTION TYPE zcx_cp_error EXPORTING iv_text = lv_msg.
     ENDIF.
 
@@ -100,7 +100,7 @@ CLASS zcl_cp_firma IMPLEMENTATION.
 
     MODIFY zhhr_cp_firm FROM @ls_firm.
     IF sy-subrc <> 0.
-      MESSAGE e005 INTO lv_msg.
+      MESSAGE e005(zhhr_cp_msg) INTO lv_msg.
       RAISE EXCEPTION TYPE zcx_cp_error EXPORTING iv_text = lv_msg.
     ENDIF.
   ENDMETHOD.

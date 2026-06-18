@@ -132,7 +132,7 @@ CLASS zcl_cp_doc_service IMPLEMENTATION.
         INSERT zhhr_cp_pdf FROM @ls_pdf.
         IF sy-subrc <> 0.
           DELETE FROM zhhr_cp_dlog WHERE doc_id = @lv_id.
-          MESSAGE e007 INTO DATA(lv_msg).
+          MESSAGE e007(zhhr_cp_msg) INTO DATA(lv_msg).
           RAISE EXCEPTION TYPE zcx_cp_error EXPORTING iv_text = lv_msg.
         ENDIF.
 
@@ -142,7 +142,7 @@ CLASS zcl_cp_doc_service IMPLEMENTATION.
       ENDIF.
     ENDDO.
 
-    MESSAGE e007 INTO lv_msg.
+    MESSAGE e007(zhhr_cp_msg) INTO lv_msg.
     RAISE EXCEPTION TYPE zcx_cp_error EXPORTING iv_text = lv_msg.
   ENDMETHOD.
 
