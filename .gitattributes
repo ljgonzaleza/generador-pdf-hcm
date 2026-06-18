@@ -1,0 +1,7 @@
+# Forzar finales de línea LF y evitar conversion CRLF en archivos del repo abapGit.
+# abapGit espera contenido UTF-8 con LF; CRLF/BOM pueden provocar CX_XSLT_FORMAT_ERROR.
+* text=auto eol=lf
+
+*.xml   text eol=lf
+*.abap  text eol=lf
+.abapgit.xml text eol=lf
